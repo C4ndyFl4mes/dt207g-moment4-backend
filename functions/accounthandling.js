@@ -21,4 +21,24 @@ async function createUser(username, password) {
     }
 }
 
-module.exports = {createUser};
+/**
+ * Loggar in en användare.
+ * @param {string} username - användarnamn
+ * @param {string} password - lösenord
+ * @returns felmeddelande.
+ */
+async function loginUser(username, password) {
+    try {
+        const user = await Account.findOne({username: username});
+        const match = await bcrpt.compare(password, user.password);
+        if (match) {
+            return {valid: true, error: {message: "Inloggningen lyckades."}};
+        } else {
+            return {valid: false, error: {message: "Användarnamn eller lösenord är felaktigt."}};
+        }
+    } catch (error) {
+        return {valid: false, error: error};
+    }
+}
+
+module.exports = {createUser, loginUser};
