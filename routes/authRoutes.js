@@ -1,8 +1,10 @@
 const express = require('express');
 const router = express.Router();
+const Account = require('../models/accounts');
 
 router.post("/register", async (req, res) => {
-    return res.json({message: "Register works!"});
+    const accounts = await Account.find();
+    return res.json(accounts);
 });
 
 router.post("/login", async (req, res) => {
