@@ -1,0 +1,397 @@
+[
+  {
+    "name": "King Slime",
+    "damage": {
+      "classic": "40",
+      "expert": "64",
+      "master": "96"
+    },
+    "health": {
+      "classic": "2000",
+      "expert": "2800",
+      "master": "3570"
+    },
+    "defense": {
+      "classic": "10",
+      "expert": "10",
+      "master": "10"
+    },
+    "environment": [
+      "Forest",
+      "Slime Rain"
+    ]
+  },
+  {
+    "name": "Eye of Cthulhu",
+    "damage": {
+      "classic": "15-30",
+      "expert": "22-44",
+      "master": "33-66"
+    },
+    "health": {
+      "classic": "2800",
+      "expert": "3640",
+      "master": "4641"
+    },
+    "defense": {
+      "classic": "12",
+      "expert": "12",
+      "master": "12"
+    },
+    "environment": [
+      "Forest",
+      "Night"
+    ]
+  },
+  {
+    "name": "Eater of Worlds",
+    "damage": {
+      "classic": "22",
+      "expert": "33",
+      "master": "49"
+    },
+    "health": {
+      "classic": "7500 (total)",
+      "expert": "10500 (total)",
+      "master": "13387 (total)"
+    },
+    "defense": {
+      "classic": "2-10",
+      "expert": "2-10",
+      "master": "2-10"
+    },
+    "environment": [
+      "Corruption",
+      "Underground"
+    ]
+  },
+  {
+    "name": "Brain of Cthulhu",
+    "damage": {
+      "classic": "30",
+      "expert": "45",
+      "master": "67"
+    },
+    "health": {
+      "classic": "1250",
+      "expert": "1625",
+      "master": "2062"
+    },
+    "defense": {
+      "classic": "14 (second phase)",
+      "expert": "14",
+      "master": "14"
+    },
+    "environment": [
+      "Crimson",
+      "Underground"
+    ]
+  },
+  {
+    "name": "Queen Bee",
+    "damage": {
+      "classic": "30-45",
+      "expert": "45-67",
+      "master": "67-100"
+    },
+    "health": {
+      "classic": "3400",
+      "expert": "4760",
+      "master": "6058"
+    },
+    "defense": {
+      "classic": "8",
+      "expert": "8-28",
+      "master": "8-28"
+    },
+    "environment": [
+      "Underground Jungle",
+      "Bee Hive"
+    ]
+  },
+  {
+    "name": "Skeletron",
+    "damage": {
+      "classic": "30 (head), 20 (hands)",
+      "expert": "45 (head), 30 (hands)",
+      "master": "67 (head), 45 (hands)"
+    },
+    "health": {
+      "classic": "4400 (head), 600 (each hand)",
+      "expert": "6160 (head), 840 (each hand)",
+      "master": "7812 (head), 1071 (each hand)"
+    },
+    "defense": {
+      "classic": "18",
+      "expert": "18",
+      "master": "18"
+    },
+    "environment": [
+      "Dungeon Entrance",
+      "Night"
+    ]
+  },
+  {
+    "name": "Deerclops",
+    "damage": {
+      "classic": "40",
+      "expert": "60",
+      "master": "90"
+    },
+    "health": {
+      "classic": "7000",
+      "expert": "9800",
+      "master": "12495"
+    },
+    "defense": {
+      "classic": "10",
+      "expert": "10",
+      "master": "10"
+    },
+    "environment": [
+      "Snow",
+      "Summoned"
+    ]
+  },
+  {
+    "name": "Wall of Flesh",
+    "damage": {
+      "classic": "50 (mouth), 70 (laser)",
+      "expert": "75 (mouth), 105 (laser)",
+      "master": "112 (mouth), 157 (laser)"
+    },
+    "health": {
+      "classic": "8000",
+      "expert": "11200",
+      "master": "14280"
+    },
+    "defense": {
+      "classic": "12",
+      "expert": "12",
+      "master": "12"
+    },
+    "environment": [
+      "Underworld",
+      "Hell"
+    ]
+  },
+  {
+    "name": "Queen Slime",
+    "damage": {
+      "classic": "40",
+      "expert": "60",
+      "master": "90"
+    },
+    "health": {
+      "classic": "18000",
+      "expert": "25200",
+      "master": "31950"
+    },
+    "defense": {
+      "classic": "20",
+      "expert": "20",
+      "master": "20"
+    },
+    "environment": [
+      "Hallow",
+      "Summoned"
+    ]
+  },
+  {
+    "name": "The Twins",
+    "damage": {
+      "classic": "40-50",
+      "expert": "60-75",
+      "master": "90-112"
+    },
+    "health": {
+      "classic": "20000 (each)",
+      "expert": "28000 (each)",
+      "master": "35700 (each)"
+    },
+    "defense": {
+      "classic": "10-20",
+      "expert": "10-20",
+      "master": "10-20"
+    },
+    "environment": [
+      "Night",
+      "Surface"
+    ]
+  },
+  {
+    "name": "The Destroyer",
+    "damage": {
+      "classic": "70 (head)",
+      "expert": "105 (head)",
+      "master": "157 (head)"
+    },
+    "health": {
+      "classic": "80000",
+      "expert": "112000",
+      "master": "142800"
+    },
+    "defense": {
+      "classic": "0 (head), 30 (body)",
+      "expert": "0, 30",
+      "master": "0, 30"
+    },
+    "environment": [
+      "Night",
+      "Surface"
+    ]
+  },
+  {
+    "name": "Skeletron Prime",
+    "damage": {
+      "classic": "40-70",
+      "expert": "60-105",
+      "master": "90-157"
+    },
+    "health": {
+      "classic": "28000 (head)",
+      "expert": "39200",
+      "master": "49980"
+    },
+    "defense": {
+      "classic": "24",
+      "expert": "24",
+      "master": "24"
+    },
+    "environment": [
+      "Night",
+      "Surface"
+    ]
+  },
+  {
+    "name": "Plantera",
+    "damage": {
+      "classic": "50",
+      "expert": "75",
+      "master": "112"
+    },
+    "health": {
+      "classic": "30000",
+      "expert": "42000",
+      "master": "53550"
+    },
+    "defense": {
+      "classic": "36",
+      "expert": "36",
+      "master": "36"
+    },
+    "environment": [
+      "Underground Jungle",
+      "Bulb"
+    ]
+  },
+  {
+    "name": "Golem",
+    "damage": {
+      "classic": "60",
+      "expert": "90",
+      "master": "135"
+    },
+    "health": {
+      "classic": "30000",
+      "expert": "42000",
+      "master": "53550"
+    },
+    "defense": {
+      "classic": "38",
+      "expert": "38",
+      "master": "38"
+    },
+    "environment": [
+      "Jungle Temple"
+    ]
+  },
+  {
+    "name": "Duke Fishron",
+    "damage": {
+      "classic": "100",
+      "expert": "150",
+      "master": "225"
+    },
+    "health": {
+      "classic": "50000",
+      "expert": "60000",
+      "master": "76500"
+    },
+    "defense": {
+      "classic": "50",
+      "expert": "50",
+      "master": "50"
+    },
+    "environment": [
+      "Ocean",
+      "Summoned with Truffle Worm"
+    ]
+  },
+  {
+    "name": "Empress of Light",
+    "damage": {
+      "classic": "100",
+      "expert": "150",
+      "master": "225"
+    },
+    "health": {
+      "classic": "70000",
+      "expert": "98000",
+      "master": "124950"
+    },
+    "defense": {
+      "classic": "50",
+      "expert": "50",
+      "master": "50"
+    },
+    "environment": [
+      "Hallow",
+      "Night or Day"
+    ]
+  },
+  {
+    "name": "Lunatic Cultist",
+    "damage": {
+      "classic": "70",
+      "expert": "105",
+      "master": "157"
+    },
+    "health": {
+      "classic": "32000",
+      "expert": "44800",
+      "master": "57120"
+    },
+    "defense": {
+      "classic": "24",
+      "expert": "24",
+      "master": "24"
+    },
+    "environment": [
+      "Dungeon",
+      "Post-Golem"
+    ]
+  },
+  {
+    "name": "Moon Lord",
+    "damage": {
+      "classic": "100",
+      "expert": "150",
+      "master": "225"
+    },
+    "health": {
+      "classic": "145000",
+      "expert": "217500",
+      "master": "277200"
+    },
+    "defense": {
+      "classic": "60",
+      "expert": "60",
+      "master": "60"
+    },
+    "environment": [
+      "Summoned",
+      "Celestial Events"
+    ]
+  }
+]

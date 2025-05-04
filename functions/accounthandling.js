@@ -1,5 +1,6 @@
 const bcrpt = require('bcrypt');
 const Account = require('../models/accounts');
+const jwt = require('jsonwebtoken');
 
 /**
  * Skapar en användare och lägger till den i databasen.
@@ -15,9 +16,9 @@ async function createUser(username, password) {
             registrationDate: new Date().toLocaleDateString("SE-sv")
         };
         const result = await Account.create(user);
-        return {valid: true, error: {message: "Lyckades lägga till ny användare.", user: result}}
+        return { valid: true, error: { message: "Lyckades lägga till ny användare.", user: result } }
     } catch (error) {
-        return {valid: false, error: error};
+        return { valid: false, error: error };
     }
 }
 
@@ -29,16 +30,31 @@ async function createUser(username, password) {
  */
 async function loginUser(username, password) {
     try {
-        const user = await Account.findOne({username: username});
+        const user = await Account.findOne({ username: username });
         const match = await bcrpt.compare(password, user.password);
         if (match) {
-            return {valid: true, error: {message: "Inloggningen lyckades."}};
+            const token = generateToken(user);
+            return { valid: true, error: { message: "Inloggningen lyckades.", token: token } };
         } else {
-            return {valid: false, error: {message: "Användarnamn eller lösenord är felaktigt."}};
+            return { valid: false, error: { message: "Användarnamn eller lösenord är felaktigt." } };
         }
     } catch (error) {
-        return {valid: false, error: error};
+        return { valid: false, error: error };
     }
 }
 
-module.exports = {createUser, loginUser};
+/**
+ * Genererar en token som ska användas vid anrop för en användare.
+ * @param {object} user - användaren
+ * @returns token.
+ */
+function generateToken(user) {
+    const payload = {
+        username: user.username,
+        role: user.role,
+        registrationDate: user.registrationDate
+    };
+    return jwt.sign(payload, process.env.JWT_KEY, { expiresIn: '1h' });
+}
+
+module.exports = { createUser, loginUser };
