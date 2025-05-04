@@ -54,15 +54,11 @@ function authenticateToken(req, res, next) {
     if (!token) {
         return res.status(401).json({ message: "Otillåten tillgång: token saknas." });
     } else {
-        jwt.verify(token, process.env.JWT_KEY, (error, username, role, registrationDate) => {
+        jwt.verify(token, process.env.JWT_KEY, (error, user) => {
             if (error) {
                 return res.status(403).json({ message: "Inkorrekt token." });
             } else {
-                req.user = {
-                    username: username,
-                    role: role,
-                    registrationDate: registrationDate
-                }
+                req.user = user;
                 next();
             }
         });
