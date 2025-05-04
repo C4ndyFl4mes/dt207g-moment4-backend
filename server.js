@@ -31,11 +31,7 @@ app.get("/api/terraria_bosses", authenticateToken, (req, res) => {
         try {
             const jsonData = JSON.parse(data);
             return res.status(200).json({
-                user: {
-                    name: req.username,
-                    role: req.role,
-                    registrationDate: req.registrationDate
-                }, terraria_bosses: jsonData
+                user: req.user, terraria_bosses: jsonData
             });
         } catch (error) {
             console.error(error);
@@ -62,9 +58,11 @@ function authenticateToken(req, res, next) {
             if (error) {
                 return res.status(403).json({ message: "Inkorrekt token." });
             } else {
-                req.username = username;
-                req.role = role;
-                req.registrationDate = registrationDate;
+                req.user = {
+                    username: username,
+                    role: role,
+                    registrationDate: registrationDate
+                }
                 next();
             }
         });
