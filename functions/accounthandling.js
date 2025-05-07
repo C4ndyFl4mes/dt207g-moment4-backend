@@ -57,4 +57,28 @@ function generateToken(user) {
     return jwt.sign(payload, process.env.JWT_KEY, { expiresIn: '1h' });
 }
 
-module.exports = { createUser, loginUser };
+/**
+ * Kollar om token är giltig.
+ * @param {object} req 
+ * @param {object} res 
+ * @param {function} next 
+ * @returns felmeddelande om det är ogiltigt, annars går den bara vidare med next().
+ */
+function authenticateToken(req, res, next) {
+    const authHeader = req.headers['authorization'];
+    const token = authHeader && authHeader.split(' ')[1];
+
+    if (!token) {
+        return res.status(401).json({ message: "Otillåten tillgång: token saknas." });
+    } else {
+        jwt.verify(token, process.env.JWT_KEY, (error, user) => {
+            if (error) {
+                return res.status(403).json({ message: "Inkorrekt token." });
+            } else {
+                req.user = user;
+                next();
+            }
+        });
+    }
+}
+module.exports = { createUser, loginUser, authenticateToken };

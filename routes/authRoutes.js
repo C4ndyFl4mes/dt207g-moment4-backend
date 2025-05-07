@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const { checkAccountInputs, isUsernameUnique } = require('../functions/validations');
-const { createUser, loginUser } = require('../functions/accounthandling');
+const { createUser, loginUser, authenticateToken } = require('../functions/accounthandling');
 
 router.post("/register", async (req, res) => {
     const { username, password } = req.body;
@@ -41,5 +41,10 @@ router.post("/login", async (req, res) => {
         return res.status(401).json({message: "Användarnamn eller lösenord är felaktigt."});
     }
 });
+
+router.get("/verify", authenticateToken, (req, res) => {
+    return res.status(200).json({valid: true});
+});
+
 
 module.exports = router;
