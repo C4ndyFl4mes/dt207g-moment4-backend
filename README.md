@@ -21,7 +21,7 @@ API:et har endast `GET` och `POST` metoder.
     <th>Metod</th>
     <th>Ändpunkt</th>
     <th>Body</th>
-    <th>Headers</th>th>
+    <th>Headers</th>
     <th>Beskrivning</th>
   </tr>
   <tr>
